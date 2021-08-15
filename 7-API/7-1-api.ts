@@ -1,0 +1,37 @@
+Array;
+[1, 2].map;
+
+type Student = {
+  passed: boolean;
+};
+
+const students: Student[] = [
+  { passed: true },
+  { passed: true },
+  { passed: false },
+];
+
+// students.every((student) => student.passed);
+const resultTmp = students.every((student) => {
+  return student.passed;
+});
+console.log(resultTmp);
+
+// Type advanced
+// Array의 every
+// ex. every<S extends T>(predicate: (value: T, index: number, array: T[]) => value is S, thisArg?: any): this is S[];
+class Animal {}
+class Cat extends Animal {
+  isCat: boolean = true;
+}
+
+class Dog extends Animal {
+  isDog: boolean = true;
+}
+
+const animals: Animal[] = [new Cat(), new Cat(), new Cat()];
+function isCat(animal: Animal): animal is Cat {
+  return (animal as Cat).isCat !== undefined;
+}
+
+console.log(animals.every<Cat>(isCat));

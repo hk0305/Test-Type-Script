@@ -1,4 +1,4 @@
-interface Stack {
+/* interface Stack {
   readonly size: number;
   push(value: string): void;
   pop(): string;
@@ -45,3 +45,4 @@ while (stack.size !== 0) {
 }
 
 stack.pop();
+ */

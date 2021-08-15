@@ -1,4 +1,4 @@
-interface Stack {
+/* interface Stack {
   readonly size: number;
   push(value: string): void;
   pop(): string;
@@ -53,3 +53,4 @@ stackService.push("Tom 3");
 while (stackService.size != 0) {
   console.log(stackService.pop());
 }
+ */
