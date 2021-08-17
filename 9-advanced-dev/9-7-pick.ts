@@ -6,20 +6,20 @@
     data: string;
   };
 
-  type VideoMetadata = Pick<Video, 'id' | 'title'>;
+  type VideoMetadata = Pick<Video, "id" | "title">;
 
   function getVideo(id: string): Video {
     return {
       id,
-      title: 'video',
-      url: 'https://..',
-      data: 'byte-data..',
+      title: "video",
+      url: "https://..",
+      data: "byte-data..",
     };
   }
   function getVideoMetadata(id: string): VideoMetadata {
     return {
       id: id,
-      title: 'title',
+      title: "title",
     };
   }
 }
